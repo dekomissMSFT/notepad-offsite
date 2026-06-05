@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+out/
+bin/
+obj/
+target/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE / Editor
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.local
+
+# Package locks (let each project manage their own)
+# Uncomment if you want to ignore these:
+# package-lock.json
+# yarn.lock
+# Cargo.lock
