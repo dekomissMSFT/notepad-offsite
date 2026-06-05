@@ -8,11 +8,14 @@ Build the **weirdest, most creative note-taking app you can imagine**. The only 
 
 "Note-taking app" is just the seed. What you build doesn't have to look, feel, or behave like any note-taking app that exists. The wackier the better.
 
+**Your role: product owner.** Think of Copilot as your engineering team. You have the vision — describe what you want, architect the direction, and let AI agents do the heavy lifting. Focus on *what* to build, not just *how* to build it.
+
 ## Goals
 
 1. **Build something weird** — if it already exists, push it in a direction nobody would expect.
-2. **Learn something new** — pick a stack, tool, or technique you've been curious about.
-3. **Have something to demo** — we'll do a quick round of show-and-tell at the end.
+2. **Think like a PM, not a coder** — have a vision, break it down, and direct Copilot to execute it. Use agent mode, multi-file edits, iterate on the output.
+3. **Learn something new** — pick a stack, tool, or technique you've been curious about.
+4. **Have something to demo** — we'll do a quick round of show-and-tell at the end.
 
 ## Ideas
 
