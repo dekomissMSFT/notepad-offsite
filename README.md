@@ -57,6 +57,17 @@ Some sparks to get you thinking:
 
 At the end of the session we'll do a quick round of demos. Show what you built and what you learned. No slides — just show the app.
 
+## Going further: agent on autopilot
+
+If you want to take the PM role further, try setting up an agent that works autonomously. File issues on your repo describing what you want, then let Copilot loop through them:
+
+```bash
+copilot -p "Check open issues on this repo. Pick one, fix it on a branch, and open a PR." \
+  --autopilot --allow-all
+```
+
+You write issues, the agent writes code, you review PRs. This is how [QuickSheet](https://github.com/cemheren/QuickSheet) was developed — an agent running on a schedule, picking issues and shipping PRs while the human just reviews and merges.
+
 ---
 
 *Previous offsite: [One Billion Row Challenge](https://github.com/gunnarmorling/1brc)*
