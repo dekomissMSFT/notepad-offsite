@@ -4,31 +4,34 @@
 
 ## The Exercise
 
-Build a **local note-taking app** — no cloud, no accounts, just a tool that runs on your machine and helps you capture and organize thoughts.
+Build the **weirdest, most creative note-taking app you can imagine**. The only constraint: it runs locally on your machine.
 
-You decide what "note-taking" means. A markdown editor? A wiki with backlinks? A terminal journal? A spatial canvas? Go wherever your curiosity takes you.
+"Note-taking app" is just the seed. What you build doesn't have to look, feel, or behave like any note-taking app that exists. The wackier the better.
 
 ## Goals
 
-1. **Learn something new** — pick a stack, tool, or technique you've been curious about.
-2. **Build something that works** — by the end of the session you should be able to create, view, and manage notes.
-3. **Share what you learned** — we'll do a quick round of demos at the end.
+1. **Build something weird** — if it already exists, push it in a direction nobody would expect.
+2. **Learn something new** — pick a stack, tool, or technique you've been curious about.
+3. **Have something to demo** — we'll do a quick round of show-and-tell at the end.
 
 ## Ideas
 
-Think wide. A "note-taking app" doesn't have to look like one. For example, [QuickSheet](https://github.com/cemheren/QuickSheet) turns the desktop wallpaper into an interactive spreadsheet — notes, runnable commands, and live data all in a grid behind your windows. Backed by a plain CSV file. That counts.
+[QuickSheet](https://github.com/cemheren/QuickSheet) turned the desktop wallpaper into an interactive spreadsheet — notes, runnable commands, and live data all in a grid behind your windows. Backed by a plain CSV file. That's the kind of energy we're going for.
 
-Some starting points, but don't limit yourself to these:
+Some sparks to get you thinking:
 
-- A minimal markdown editor
-- A terminal-based daily journal
-- A wiki with backlinks and a graph view
-- A spatial canvas where notes are placed freely
-- A voice-to-text scratchpad
-- A desktop widget that's always visible
-- A CLI that pipes into other tools
-- A block editor like Notion
-- Something that doesn't exist yet
+- Notes that live in your terminal prompt
+- A note app where the UI is a game
+- Notes stored as git commits
+- A note-taking app that only accepts drawings
+- A physical keyboard macro pad that types your notes
+- Notes that are ephemeral and slowly fade away
+- A note app that talks back to you
+- A 3D note space you navigate like a video game
+- Notes that spread across your file system like a virus
+- Desktop wallpaper that IS your notes
+- A note app controlled entirely by hand gestures
+- Something no one has thought of yet
 
 ## Getting Started
 
