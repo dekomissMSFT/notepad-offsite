@@ -16,20 +16,19 @@ You decide what "note-taking" means. A markdown editor? A wiki with backlinks? A
 
 ## Ideas
 
-Here are some features to consider. Pick what interests you — there's no checklist to complete.
+Think wide. A "note-taking app" doesn't have to look like one. For example, [QuickSheet](https://github.com/cemheren/QuickSheet) turns the desktop wallpaper into an interactive spreadsheet — notes, runnable commands, and live data all in a grid behind your windows. Backed by a plain CSV file. That counts.
 
-- Create, read, update, delete notes
-- Local persistence (file system, SQLite, etc.)
-- Search and filtering
-- Markdown rendering
-- Tags or categories
-- Keyboard-driven workflow
-- Import/export
-- Backlinks or note graph
-- Rich text or block-based editing
-- Version history
-- Spatial canvas
-- Voice input
+Some starting points, but don't limit yourself to these:
+
+- A minimal markdown editor
+- A terminal-based daily journal
+- A wiki with backlinks and a graph view
+- A spatial canvas where notes are placed freely
+- A voice-to-text scratchpad
+- A desktop widget that's always visible
+- A CLI that pipes into other tools
+- A block editor like Notion
+- Something that doesn't exist yet
 
 ## Getting Started
 
