@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Note Graph</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+  <script src="https://unpkg.com/layout-base@2.0.1/layout-base.js"></script>
+  <script src="https://unpkg.com/cose-base@2.2.0/cose-base.js"></script>
+  <script src="https://unpkg.com/cytoscape-fcose@2.2.0/cytoscape-fcose.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Note Graph</h1>
+      <button id="toggle-sidebar" title="Toggle notes list">☰</button>
+      <button id="new-note">+ New</button>
+      <input id="search" type="search" placeholder="Search notes…" />
+      <label class="slider-label">
+        Threshold
+        <input id="threshold" type="range" min="0" max="1" step="0.05" value="0" />
+        <span id="threshold-val">0.00</span>
+      </label>
+      <button id="import-btn" title="Import .md files">⬆ Import</button>
+      <input id="import-input" type="file" multiple accept=".md,.markdown,text/markdown" hidden />
+      <a id="export-btn" href="/api/export" title="Download all notes as .zip">⬇ Export</a>
+      <button id="refresh" title="Re-fetch graph">↻</button>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <div class="sidebar-head">
+          <span>Notes</span>
+          <span id="notes-count" class="hint"></span>
+        </div>
+        <ul id="notes-list"></ul>
+      </aside>
+      <div id="cy"></div>
+      <div id="tooltip" hidden></div>
+      <div id="context-menu" hidden></div>
+      <div id="link-banner" hidden>
+        <span>Click another node to link, or click the background to cancel.</span>
+      </div>
+      <aside id="panel">
+        <div id="panel-content"></div>
+      </aside>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

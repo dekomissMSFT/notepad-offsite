@@ -1,0 +1,1 @@
+"""Note graph app package."""

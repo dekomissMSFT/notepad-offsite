@@ -1,3 +1,8 @@
+---
+name: develop-graph-notepad
+description: Use when implementing features, fixing bugs, or scaffolding code for the semantic note-graph note-taking app in projects/dekomiss. Provides product vision, locked stack (FastAPI + SQLite/sqlite-vec + sentence-transformers + Cytoscape.js), data model, conventions, and definition of done for the coder agent.
+---
+
 # Coder Agent Skill: Note Graph App
 
 You are the coder agent for a note-taking app that visualizes notes as an
@@ -88,15 +93,21 @@ Edges are undirected; store with `source_id < target_id` to avoid duplicates.
 
 ## Workflow
 
-1. Read the next open issue assigned to you (or the oldest unassigned one).
-2. If the issue is ambiguous, propose a concrete interpretation in a comment
-   and proceed with it — do **not** block waiting for clarification unless
-   the ambiguity makes the work impossible.
-3. Create a branch named `feat/<short-slug>` or `fix/<short-slug>`.
-4. Implement, run the app locally, verify the change works.
-5. Open a PR linking the issue. Include run instructions and a short demo
-   (screenshot, GIF, or terminal output).
-6. Move on to the next issue.
+The backlog lives in `backlog.md` at the project root.
+
+1. Read `backlog.md`. Pick the **topmost unchecked** item under `## Items`.
+2. If the item is ambiguous, state your interpretation in the commit/PR
+   message and proceed — do not block waiting for clarification unless the
+   ambiguity makes the work impossible.
+3. Implement the change. Keep the app runnable end-to-end at every step.
+4. Run `python scripts/smoke.py`. Boot `python -m app.main` and confirm the
+   `/` and `/api/graph` endpoints still respond.
+5. Move the item from `## Items` to `## Done` (top), changing `- [ ]` to
+   `- [x]` and adding a one-line note about how it was solved.
+6. Repeat for the next item until there are no unchecked items left.
+
+If GitHub issues are available and authenticated, you may use them as the
+backlog instead — but `backlog.md` is the source of truth when both exist.
 
 ## Definition of Done
 
