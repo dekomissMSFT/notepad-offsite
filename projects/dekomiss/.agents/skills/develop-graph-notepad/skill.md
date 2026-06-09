@@ -39,27 +39,27 @@ The graph is the primary UI. Notes are created, edited, and explored through it.
    components). Don't fake clusters with colors only — the layout itself
    should reflect cluster structure.
 
-## Suggested Architecture
+## Architecture (locked)
 
-Pick the simplest stack that meets the requirements. A reasonable default:
+Use this stack. Do not swap components without an explicit issue requesting it.
 
-- **Backend:** Python (FastAPI) or Node.js (Express/Fastify).
-- **Storage:** SQLite with a vector extension (`sqlite-vec` / `sqlite-vss`)
-  or a small embedded vector store.
-- **Embeddings:** local `sentence-transformers` model, or Ollama
-  (`nomic-embed-text`).
-- **Edge scoring:** cosine similarity over embeddings + a configurable
-  threshold; optionally augment with keyword/tag overlap.
-- **Edge reasoning:** short LLM-generated explanation (local model) cached
-  per edge, or a deterministic explanation built from top shared terms when
-  no LLM is available.
-- **Frontend:** web UI served locally. Graph rendering with Cytoscape.js,
-  Sigma.js, or D3-force. Force-directed layout, cluster-aware.
-- **Packaging:** one command to install deps, one command to run
-  (`make dev` or equivalent). Document both in the project README.
-
-Deviate from these defaults if you have a clearly better option for the
-issue at hand — but justify it in the PR description.
+- **Backend:** Python with **FastAPI**.
+- **Storage:** **SQLite** with `sqlite-vec` for vector storage.
+- **Embeddings:** local **`sentence-transformers`** (default model:
+  `all-MiniLM-L6-v2`; make it configurable). Fall back to Ollama
+  `nomic-embed-text` only if explicitly requested.
+- **Edge scoring:** cosine similarity over embeddings with a configurable
+  threshold; augment with keyword/tag overlap when useful.
+- **Edge reasoning:** deterministic explanation from top shared terms by
+  default; optional LLM-generated explanation (local model via Ollama),
+  cached per edge.
+- **Clustering:** Louvain/Leiden community detection over the similarity
+  graph, or HDBSCAN over embeddings — pick per issue, document choice.
+- **Frontend:** local web UI served by FastAPI. Graph rendering with
+  **Cytoscape.js**, force-directed, cluster-aware layout.
+- **Packaging:** one command to install (`pip install -e .` or `uv sync`),
+  one command to run (`make dev` or `uvicorn ...`). Document both in the
+  project README.
 
 ## Data Model (starting point)
 
